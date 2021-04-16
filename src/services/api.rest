@@ -1,0 +1,147 @@
+### Sign In
+POST https://fabithub.com/projects/rider/api/signin HTTP/1.1
+
+{
+	"uuid": "254fsdfdsfsdgsfgdskg",
+	"first_name" : "sdf",
+	"last_name": "sdfds",
+	"app_token": "sdfdfsfsdfsd",
+	"email":"dfsdf",
+	"mobile": "+917014569040",
+	"password": "sdfsd",
+	"profile_pic": "sdfsdf"
+}
+
+### Update Profile
+POST https://fabithub.com/projects/rider/api/updateProfile HTTP/1.1
+
+{
+	"user_id"     : "2",
+	"first_name"  : "first_name",
+	"last_name"   : "last_name",
+	"profile_pic" : "profile_pic",
+	"dob"         : "1995-12-1",
+	"mobile"      : "mobile"
+}
+
+
+### Get All Vehicles
+GET https://fabithub.com/projects/rider/api/vehicles HTTP/1.1
+
+{}
+
+### Get All Vehicles Categories
+GET https://fabithub.com/projects/rider/api/vehicleCategories HTTP/1.1
+
+### Update Driver Details
+POST https://fabithub.com/projects/rider/api/updateDriverDetails HTTP/1.1
+
+{
+	"pan"                     : "pan",
+	"ifsc"                    : "ifsc",
+	"micr"                    : "micr",
+	"brand"                   : "brand",
+	"model"                   : "model",
+	"color"                   : "color",
+	"seats"                   : "seats",
+	"image"                   : "image",
+	"aadhar"                  : "aadhar",
+	"user_id"                 : "user_id",
+	"bank_name"               : "bank_name",
+	"vehicle_no"              : "vehicle_no",
+	"category_id"             : "category_id",
+	"branch_name"             : "branch_name",
+	"bank_account_no"         : "bank_account_no",
+	"driving_licence"         : "driving_licence",
+	"manufacture_year"        : "manufacture_year",
+	"pollution_certificate"   : "pollution_certificate",
+	"registration_certificate": "registration_certificate"
+}
+
+### Update Driver Status
+POST https://fabithub.com/projects/rider/api/driverStatus HTTP/1.1
+
+{
+	"user_id": "41",
+	"is_active":"online",
+	"location": "borkhera",
+	"location_lat": "25.183049986469253",
+	"location_long": "75.9034108244133"
+}
+
+### Book Ride
+POST https://fabithub.com/projects/rider/api/bookRide HTTP/1.1
+
+{
+	"user_id"	  : "53",
+	"kms"         : "9.075",
+	"price"       : "229.50",
+	"drop_lat"    : "25.158009466834",
+	"drop_text"   : "732, Dadabari Rd, Basant Vihar, Dadabari, Kota, Rajasthan 324009, India",
+	"drop_long"   : "75.827232878655",
+	"pickup_lat"  : "25.22386072684",
+	"pickup_text" : "Kota Junction, New Railway Colony, Railway Station Area, Kota, Rajasthan 324002, India",
+	"pickup_long" : "75.880796257406"
+}
+
+### calc
+POST https://fabithub.com/projects/rider/api/calc HTTP/1.1
+
+{}
+
+### update Booking status
+## @var status {complete,accept,reject,pickup,ongoing}
+POST https://fabithub.com/projects/rider/api/updateBooking HTTP/1.1
+
+{
+	"user_id": "41",
+	"order_id":"1",
+	"status": "accept"
+}
+
+### Review
+POST https://fabithub.com/projects/rider/api/review HTTP/1.1
+
+{
+	"rate": 3,
+	"review": "comsdfdsfsd",
+	"user_id": "32",
+	"reviewer_id": "33"
+}
+
+### Get Vehicle Details
+POST https://fabithub.com/projects/rider/api/vehicleDetails HTTP/1.1
+
+{
+    "vehicle_id": "1"
+}
+
+### Get Drivers Details
+POST https://fabithub.com/projects/rider/api/driverDetails HTTP/1.1
+
+{
+    "driver_id": "4"
+}
+
+### Add Money
+POST https://fabithub.com/projects/rider/api/addMoney HTTP/1.1
+
+{
+    "user_id": 53,
+    "amount": 150,
+    "razorpay": "SFSDF784512554"
+}
+
+###
+POST https://fabithub.com/projects/rider/api/sendNotification HTTP/1.1
+
+{
+    "driver_id": "4"
+}
+
+###
+POST https://fabithub.com/projects/rider/api/checkBookingStatus HTTP/1.1
+
+{
+    "userOrder_id": 1
+}
